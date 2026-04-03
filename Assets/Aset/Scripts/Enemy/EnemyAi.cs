@@ -42,6 +42,11 @@ public class EnemyAi : MonoBehaviour
                 MoveTowardsPlayer();
             }
         }
+        else
+        {
+            rb.velocity = Vector2.zero; // Stop moving if the player is out of detection range
+            rb.angularVelocity = 0f; // Stop rotating if the player is out of detection range
+        }
     }
 
     private void RotateTowardsPlayer()
