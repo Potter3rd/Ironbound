@@ -23,6 +23,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
 
+    public float health = 50f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -47,6 +49,8 @@ public class EnemyAi : MonoBehaviour
             rb.velocity = Vector2.zero; // Stop moving if the player is out of detection range
             rb.angularVelocity = 0f; // Stop rotating if the player is out of detection range
         }
+
+        OnCollisionEnter2D(new Collision2D());
     }
 
     private void RotateTowardsPlayer()
@@ -67,5 +71,32 @@ public class EnemyAi : MonoBehaviour
     {
         Vector2 direction = (player.position - transform.position).normalized;
         rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Handle collision with player (e.g., deal damage, play animation, etc.)
+            takeDamage(10f);
+        }
+    }
+
+    private takeDamage(float damage)
+    {
+        // Handle taking damage (e.g., reduce health, play animation, etc.)
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        // Handle enemy death (e.g., play animation, disable controls, etc.)
+        Debug.Log("Enemy has died.");
+        // For example, you could disable the enemy GameObject:
+        gameObject.SetActive(false);
     }
 }
