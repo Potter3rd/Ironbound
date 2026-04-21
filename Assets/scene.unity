@@ -119,17 +119,10 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &298663660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8905200694412757942, guid: e3abf2f011454ce4187dc52318ff1fa9, type: 3}
   m_PrefabInstance: {fileID: 5087175297710400760}
-=======
---- !u!1 &224825964 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1400178438937885488, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
-  m_PrefabInstance: {fileID: 607911394930925907}
->>>>>>> 6b34ca185bbbbb26eb93a79c504bf1ec485d1529
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &328159088
 GameObject:
@@ -8624,22 +8617,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 12070832436775618, guid: e3abf2f011454ce4187dc52318ff1fa9, type: 3}
   m_PrefabInstance: {fileID: 5087175297710400760}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 --- !u!61 &1896176489
 BoxCollider2D:
-=======
---- !u!68 &1896176488
-EdgeCollider2D:
->>>>>>> 6b34ca185bbbbb26eb93a79c504bf1ec485d1529
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 298663660}
-=======
-  m_GameObject: {fileID: 416182747}
->>>>>>> 6b34ca185bbbbb26eb93a79c504bf1ec485d1529
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -8667,7 +8651,6 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-<<<<<<< HEAD
   m_Offset: {x: 0.0013805404, y: 0.0021920577}
   m_SpriteTilingProperty:
     border: {x: 0.03, y: 0, z: 0, w: 0}
@@ -8680,36 +8663,6 @@ EdgeCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.1393636, y: 0.07915145}
   m_EdgeRadius: 0
-=======
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.030646686, y: -0.03434595}
-  - {x: -0.031470075, y: -0.034550834}
-  - {x: -0.030666418, y: -0.024528924}
-  - {x: -0.050557334, y: -0.027197484}
-  - {x: -0.04948495, y: -0.014914791}
-  - {x: -0.05876529, y: -0.0153827965}
-  - {x: -0.059032414, y: 0.014969884}
-  - {x: -0.049562693, y: 0.014225619}
-  - {x: -0.04885683, y: 0.024920382}
-  - {x: -0.031182336, y: 0.024512943}
-  - {x: -0.03211138, y: 0.03368607}
-  - {x: 0.032230858, y: 0.03458715}
-  - {x: 0.03152879, y: 0.02452973}
-  - {x: 0.04946738, y: 0.026224915}
-  - {x: 0.05068644, y: 0.015239211}
-  - {x: 0.062244184, y: 0.014335897}
-  - {x: 0.06088256, y: -0.01502618}
-  - {x: 0.051901013, y: -0.016822482}
-  - {x: 0.052925866, y: -0.02598697}
-  - {x: 0.030944146, y: -0.025804004}
-  - {x: 0.032141685, y: -0.034186743}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
->>>>>>> 6b34ca185bbbbb26eb93a79c504bf1ec485d1529
 --- !u!1 &1949527485
 GameObject:
   m_ObjectHideFlags: 0
@@ -9296,11 +9249,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8905200694412757942, guid: e3abf2f011454ce4187dc52318ff1fa9, type: 3}
       insertIndex: -1
-<<<<<<< HEAD
       addedObject: {fileID: 1896176489}
-=======
-      addedObject: {fileID: 1896176488}
->>>>>>> 6b34ca185bbbbb26eb93a79c504bf1ec485d1529
   m_SourcePrefab: {fileID: 100100000, guid: e3abf2f011454ce4187dc52318ff1fa9, type: 3}
 --- !u!1001 &7222737499825637538
 PrefabInstance:
@@ -9480,11 +9429,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2157950673162017417, guid: 088f1a84dba73bc4c9662b6ac5a686fd, type: 3}
       insertIndex: -1
-<<<<<<< HEAD
       addedObject: {fileID: 617359586}
-=======
-      addedObject: {fileID: 2099767506}
->>>>>>> 6b34ca185bbbbb26eb93a79c504bf1ec485d1529
   m_SourcePrefab: {fileID: 100100000, guid: 088f1a84dba73bc4c9662b6ac5a686fd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
