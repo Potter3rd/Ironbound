@@ -29,6 +29,17 @@ public class Player : MonoBehaviour
             // Example of taking damage when space is pressed
             TakeDamage(10.0f);
         }
+
+        OnCollisionEnter2D(new Collision2D());
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Example of taking damage when colliding with an enemy
+            TakeDamage(20.0f);
+        }
     }
 
     public void TakeDamage(float damage)
