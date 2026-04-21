@@ -82,7 +82,7 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
-    private takeDamage(float damage)
+    private void takeDamage(float damage)
     {
         // Handle taking damage (e.g., reduce health, play animation, etc.)
         health -= damage;
@@ -90,6 +90,7 @@ public class EnemyAi : MonoBehaviour
         {
             Die();
         }
+        
     }
 
     private void Die()
