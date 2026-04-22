@@ -6362,6 +6362,7 @@ GameObject:
   - component: {fileID: 1022903981}
   - component: {fileID: 1022903984}
   - component: {fileID: 1022903983}
+  - component: {fileID: 1022903985}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6441,6 +6442,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7018956eaa3709646af7a6bcb63368f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &1022903985
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022903980}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.07}
+  m_Size: {x: 0.05, y: 0.15}
+  m_Direction: 0
 --- !u!1 &1188347929
 GameObject:
   m_ObjectHideFlags: 0
@@ -8314,6 +8352,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3971410633955381763, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5747245062543873444, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: m_Mass
       value: 1
@@ -8343,16 +8385,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 501964729}
     - target: {fileID: 7036685280368871510, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036685280368871510, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1022903982}
     - target: {fileID: 7036685280368871510, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036685280368871510, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: bladeRange
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036685280368871510, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+      propertyPath: rotationSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7036685280368871510, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: detectionRange
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028710770756749766, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8631019634923045967, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: m_LocalScale.x
@@ -8368,11 +8426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8631019634923045967, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8631019634923045967, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.86
+      value: 30.63
       objectReference: {fileID: 0}
     - target: {fileID: 8631019634923045967, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8410,11 +8468,65 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9036510128650521622, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+      propertyPath: m_TagString
+      value: EnemyB
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148910618410707315, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7875760063460264022, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3095901371886466775, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1707669252}
   m_SourcePrefab: {fileID: 100100000, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+--- !u!1 &1707669247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3095901371886466775, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
+  m_PrefabInstance: {fileID: 1612907719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &1707669252
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707669247}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.01, y: -1.1}
+  m_Size: {x: 0.7, y: 2}
+  m_Direction: 0
 --- !u!1 &1794742804
 GameObject:
   m_ObjectHideFlags: 0
@@ -8749,6 +8861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blade
       objectReference: {fileID: 0}
+    - target: {fileID: 1400178438937885488, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
+      propertyPath: m_TagString
+      value: PlayerB
+      objectReference: {fileID: 0}
     - target: {fileID: 6842661443369531744, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.025
@@ -8791,7 +8907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7069918354850092563, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7069918354850092563, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
       propertyPath: m_Points.Array.size

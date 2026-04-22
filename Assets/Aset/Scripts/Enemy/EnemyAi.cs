@@ -4,13 +4,13 @@ public class EnemyAi : MonoBehaviour
 {
     [SerializeField]
     public Transform player;
-    
+
     [SerializeField]
     public float speed = 3f;
-    
+
     [SerializeField]
     public float detectionRange = 10f;
-    
+
     [SerializeField]
     public float rotationSpeed = 200f;
 
@@ -23,7 +23,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
 
-    public float health = 50f;
+    public float health = 10f;
 
     private void Start()
     {
@@ -49,8 +49,6 @@ public class EnemyAi : MonoBehaviour
             rb.velocity = Vector2.zero; // Stop moving if the player is out of detection range
             rb.angularVelocity = 0f; // Stop rotating if the player is out of detection range
         }
-
-        OnCollisionEnter2D(new Collision2D());
     }
 
     private void RotateTowardsPlayer()
@@ -59,12 +57,14 @@ public class EnemyAi : MonoBehaviour
         Vector2 direction = (player.position - transform.position).normalized;
 
         // 2. Calculate the angle (in degrees) to face the target
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg -90f;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
 
         // 4. Apply rotation (instant or smooth)
         // Option A: Instant rotation (no smoothing)
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        //transform.rotation = Quaternion.Euler(0, 0, angle);
 
+        Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
     }
 
     private void MoveTowardsPlayer()
@@ -73,9 +73,9 @@ public class EnemyAi : MonoBehaviour
         rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("PlayerB"))
         {
             // Handle collision with player (e.g., deal damage, play animation, etc.)
             takeDamage(10f);
@@ -90,7 +90,7 @@ public class EnemyAi : MonoBehaviour
         {
             Die();
         }
-        
+
     }
 
     private void Die()
