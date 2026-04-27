@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraFCluade : MonoBehaviour
 {
@@ -24,5 +25,10 @@ public class CameraFCluade : MonoBehaviour
         }
 
         transform.position = smoothed;
+    }
+
+    public void openSettings()
+    {
+        SceneManager.LoadSceneAsync(2);
     }
 }

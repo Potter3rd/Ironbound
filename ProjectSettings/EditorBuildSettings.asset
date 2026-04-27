@@ -12,7 +12,10 @@ EditorBuildSettings:
     path: Assets/MainMenu.unity
     guid: cf9925fd85d5e0041abde564f472da3e
   - enabled: 1
-    path: Assets/scene.unity
+    path: Assets/Game.unity
     guid: 82600dd0b7b02a749a8e854b9e88fd30
+  - enabled: 1
+    path: Assets/Settings Menu.unity
+    guid: 516253bed06892b428fd212ab31bf1fa
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
