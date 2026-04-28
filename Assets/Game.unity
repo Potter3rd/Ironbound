@@ -272,6 +272,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &402050125 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5383475426073445437, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
+  m_PrefabInstance: {fileID: 607911394930925907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &436889425
 GameObject:
   m_ObjectHideFlags: 0
@@ -6496,6 +6501,7 @@ GameObject:
   - component: {fileID: 1022903984}
   - component: {fileID: 1022903983}
   - component: {fileID: 1022903985}
+  - component: {fileID: 1022903986}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6517,6 +6523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   health: 100
+  bladeData: {fileID: 0}
 --- !u!4 &1022903982
 Transform:
   m_ObjectHideFlags: 0
@@ -6612,6 +6619,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.07}
   m_Size: {x: 0.05, y: 0.15}
   m_Direction: 0
+--- !u!114 &1022903986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022903980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c32db1941ba124795e85d351e08d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blades: []
+  equipped: {fileID: 11400000, guid: 8826f51cd2f02c64d83ab61ba75f729d, type: 2}
+  playerSprite: {fileID: 402050125}
 --- !u!1 &1188347929
 GameObject:
   m_ObjectHideFlags: 0

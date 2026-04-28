@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     //player variables
     public float speed = 10.0f;
     private Rigidbody2D rb;
-
     public float health = 100.0f;
+    public BladeData bladeData; // Reference to the BladeData ScriptableObject
 
     void Start()
     {

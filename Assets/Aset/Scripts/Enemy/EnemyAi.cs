@@ -78,7 +78,7 @@ public class EnemyAi : MonoBehaviour
         if (other.CompareTag("PlayerB"))
         {
             // Handle collision with player (e.g., deal damage, play animation, etc.)
-            takeDamage(10f);
+            takeDamage(10);
         }
     }
 
