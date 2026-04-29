@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public float speed = 10.0f;
     private Rigidbody2D rb;
     public float health = 100.0f;
-    public BladeData bladeData; // Reference to the BladeData ScriptableObject
+    public BladeMANAGER bladeManager;
 
     void Start()
     {
@@ -23,24 +23,22 @@ public class Player : MonoBehaviour
 
         rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
         rb.velocity = new Vector2(rb.velocity.x, inputY * speed);
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Example of taking damage when space is pressed
-            TakeDamage(10.0f);
-        }
-
     }
 
+    //Checks if the enemy touches the player and if it does, it takes damage
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("EnemyB"))
-        {
-            // Example of taking damage when colliding with an enemy
-            TakeDamage(20.0f);
+        {   
+            EnemyAi enemy = other.GetComponentInParent<EnemyAi>();
+            if (enemy != null)
+            {
+                TakeDamage(enemy.damage);
+            }
         }
     }
 
+    //take damage function that reduces the player's health and checks for death
     public void TakeDamage(float damage)
     {
         health -= damage;
@@ -50,11 +48,24 @@ public class Player : MonoBehaviour
         }
     }
 
+    //if player runs out of health, this function is called to handle the player's death
     private void Die()
     {
         // Handle player death (e.g., play animation, disable controls, etc.)
         Debug.Log("Player has died.");
         // For example, you could disable the player GameObject:
         gameObject.SetActive(false);
+    }
+
+    public float getDamage()
+    {
+        if (bladeManager.equipped != null)
+        {
+            return bladeManager.equipped.damage;
+        }
+        else
+        {
+            return 0.0f; // No blade equipped, so no damage
+        }
     }
 }

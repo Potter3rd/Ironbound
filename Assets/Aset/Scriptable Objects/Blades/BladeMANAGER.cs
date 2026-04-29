@@ -8,6 +8,11 @@ public class BladeMANAGER : MonoBehaviour
     public BladeData equipped;
     public SpriteRenderer playerSprite;
 
+    private void Start()
+    {
+        offerBlade(blades[0]); // Equip the first blade by default
+    }
+
     public void offerBlade(BladeData blade)
     {
         equipped = blade;
