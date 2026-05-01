@@ -1,21 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public void returnToGame()
+    public GameObject settingsPanel;
+
+    void Update()
     {
-        SceneManager.LoadSceneAsync(1);
+        // Press Escape to toggle settings
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (settingsPanel.activeSelf)
+                CloseSettings();
+            else
+                OpenSettings();
+        }
     }
 
-    public void openMainMenu()
+    public void OpenSettings()
     {
-        SceneManager.LoadSceneAsync(0);
+        settingsPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
-    public void quitGame()
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void QuitGame()
     {
         Application.Quit();
     }
