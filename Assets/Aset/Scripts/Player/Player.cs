@@ -7,12 +7,19 @@ public class Player : MonoBehaviour
     //player variables
     public float speed = 10.0f;
     private Rigidbody2D rb;
-    public float health = 100.0f;
     public BladeMANAGER bladeManager;
+
+    public GuardManager guardManager;
+
+    public HiltManager hiltManager;
+
+    public float health;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        health = hiltManager.equipped.health;
     }
 
     // Update is called once per frame
@@ -41,7 +48,13 @@ public class Player : MonoBehaviour
     //take damage function that reduces the player's health and checks for death
     public void TakeDamage(float damage)
     {
-        health -= damage;
+        float damageTaken = damage - getDefense();
+        if (damageTaken < 0)
+        {
+            damageTaken = 0;
+        }
+
+        health -= damageTaken;
         if (health <= 0)
         {
             Die();
@@ -66,6 +79,18 @@ public class Player : MonoBehaviour
         else
         {
             return 0.0f; // No blade equipped, so no damage
+        }
+    }
+
+    public float getDefense()
+    {
+        if (guardManager.equipped != null)
+        {
+            return guardManager.equipped.defense;
+        }
+        else
+        {
+            return 0.0f; // No guard equipped, so no defense
         }
     }
 }

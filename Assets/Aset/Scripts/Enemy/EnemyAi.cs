@@ -99,10 +99,8 @@ public class EnemyAi : MonoBehaviour
     //if the enemy runs out of health, this function is called to handle the enemy's death
     private void Die()
     {
-        // Handle enemy death (e.g., play animation, disable controls, etc.)
         Debug.Log("Enemy has died.");
-
-        // For example, you could disable the enemy GameObject:
+        FindObjectOfType<ChoiceUi>().ShowChoicePanel();
         gameObject.SetActive(false);
     }
 }
