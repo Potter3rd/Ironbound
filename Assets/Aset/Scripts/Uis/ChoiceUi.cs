@@ -75,11 +75,18 @@ public class ChoiceUi : MonoBehaviour
     void SelectItem(int index)
     {
         if (offerTypes[index] == 0)
+        {
             bladeManager.offerBlade((BladeData)offeredItems[index]);
+        }
         else if (offerTypes[index] == 1)
+        {
             hiltManager.offerHilt((HiltData)offeredItems[index]);
+        }
         else
+        {
             guardManager.offerGuard((GuardData)offeredItems[index]);
+        }
+
 
         choicePanel.SetActive(false);
         Time.timeScale = 1f;
