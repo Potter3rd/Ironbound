@@ -17,6 +17,7 @@ public class BladeMANAGER : MonoBehaviour
     {
         equipped = blade;
         playerSprite.sprite = equipped.bladeSprite;
-        Debug.Log("Equipped blade: " + equipped.bladeName + " with damage: " + equipped.damage);
+        //Debug.Log("Equipped blade: " + equipped.bladeName + " with damage: " + equipped.damage);
+        Debug.Log("Player sprite updated to: " + playerSprite.sprite.name);
     }
 }
