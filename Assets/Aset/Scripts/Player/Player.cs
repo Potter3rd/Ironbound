@@ -20,7 +20,9 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         if(hiltManager.equipped != null)
+        {
             health = hiltManager.equipped.health;
+        }
     }
 
     // Update is called once per frame

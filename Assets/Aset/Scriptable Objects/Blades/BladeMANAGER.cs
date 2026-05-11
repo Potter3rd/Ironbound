@@ -16,7 +16,11 @@ public class BladeMANAGER : MonoBehaviour
     public void offerBlade(BladeData blade)
     {
         equipped = blade;
+        playerSprite.sprite = null;
         playerSprite.sprite = equipped.bladeSprite;
+        playerSprite.enabled = false;
+        playerSprite.enabled = true;
+
         //Debug.Log("Equipped blade: " + equipped.bladeName + " with damage: " + equipped.damage);
         Debug.Log("Player sprite updated to: " + playerSprite.sprite.name);
     }

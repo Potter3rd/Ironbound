@@ -103,4 +103,9 @@ public class EnemyAi : MonoBehaviour
         FindObjectOfType<ChoiceUi>().ShowChoicePanel();
         gameObject.SetActive(false);
     }
+
+    public float GetHealth()
+    {
+        return health;
+    }
 }
