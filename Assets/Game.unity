@@ -1474,7 +1474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7036685280368871510, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: health
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7036685280368871510, guid: 6db445e3a5d28804fa8f63f0263a5da5, type: 3}
       propertyPath: player
@@ -74103,10 +74103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blades:
-  - {fileID: 11400000, guid: 8826f51cd2f02c64d83ab61ba75f729d, type: 2}
-  - {fileID: 11400000, guid: 9dffb8fde3360054493cfe5de45b0fa1, type: 2}
-  - {fileID: 11400000, guid: a948b85521226f140991428ec47489c7, type: 2}
   - {fileID: 11400000, guid: facac7035c2644f4e908a0d490af2c2d, type: 2}
+  - {fileID: 11400000, guid: 8826f51cd2f02c64d83ab61ba75f729d, type: 2}
+  - {fileID: 11400000, guid: a948b85521226f140991428ec47489c7, type: 2}
   equipped: {fileID: 0}
   playerSprite: {fileID: 402050125}
 --- !u!114 &1022903987
@@ -89063,6 +89062,7 @@ MonoBehaviour:
   - {fileID: 741750868}
   - {fileID: 41981925}
   - {fileID: 2078621380}
+  player: {fileID: 0}
 --- !u!4 &1896176486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 12070832436775618, guid: e3abf2f011454ce4187dc52318ff1fa9, type: 3}
@@ -89746,6 +89746,14 @@ PrefabInstance:
     - target: {fileID: 1400178438937885488, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
       propertyPath: m_TagString
       value: PlayerB
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383475426073445437, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383475426073445437, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6842661443369531744, guid: 6613a1786a5db7d4d8e25347acec76c7, type: 3}
       propertyPath: m_LocalPosition.x

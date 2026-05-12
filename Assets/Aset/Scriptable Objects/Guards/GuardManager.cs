@@ -17,6 +17,5 @@ public class GuardManager : MonoBehaviour
     {
         equipped = guard;
         playerSprite.sprite = equipped.guardSprite;
-        Debug.Log("Equipped guard: " + equipped.guardName + " with defense: " + equipped.defense);
     }
 }

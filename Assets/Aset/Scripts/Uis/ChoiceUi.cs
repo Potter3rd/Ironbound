@@ -11,6 +11,7 @@ public class ChoiceUi : MonoBehaviour
     public Image[] choiceImages;
     public TextMeshProUGUI[] choiceNames;
 
+    public Player player;
     private BladeMANAGER bladeManager;
     private HiltManager hiltManager;
     private GuardManager guardManager;
@@ -20,14 +21,20 @@ public class ChoiceUi : MonoBehaviour
 
     void Start()
     {
-        bladeManager = FindObjectOfType<BladeMANAGER>();
-        hiltManager = FindObjectOfType<HiltManager>();
-        guardManager = FindObjectOfType<GuardManager>();
+        bladeManager = player.GetComponent<BladeMANAGER>();
+        hiltManager = player.GetComponent<HiltManager>();
+        guardManager = player.GetComponent<GuardManager>();
         choicePanel.SetActive(false);
     }
 
     public void ShowChoicePanel()
     {
+        Debug.Log("Blades in Manager");
+        foreach ( var b in bladeManager.blades)
+        {
+            Debug.Log(b.bladeName + "|" + b.GetInstanceID());
+        }
+
         int[] types = { 0, 1, 2 };
         for (int i = types.Length - 1; i > 0; i--)
         {
@@ -69,11 +76,12 @@ public class ChoiceUi : MonoBehaviour
         }
 
         choicePanel.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     void SelectItem(int index)
     {
+        Debug.Log("Selected Index: " + index);
         if (offerTypes[index] == 0)
         {
             bladeManager.offerBlade((BladeData)offeredItems[index]);

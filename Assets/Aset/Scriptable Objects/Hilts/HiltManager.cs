@@ -18,7 +18,6 @@ public class HiltManager : MonoBehaviour
     {
         equipped = hilt;
         playerSprite.sprite = equipped.hiltSprite;
-        Debug.Log("Equipped hilt: " + equipped.hiltName + " with health: " + equipped.health);
         player.health = equipped.health; // Set player's health to the hilt's health
     }
 }
