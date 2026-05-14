@@ -1,4 +1,6 @@
 using UnityEngine;
+// This script controls the behavior of an enemy character in a 2D game. The enemy will detect the player, rotate to face them, and move towards them if they are within a certain range.
+// //The enemy will also take damage from the player and die when its health reaches zero.
 
 public class EnemyAi : MonoBehaviour
 {
@@ -8,24 +10,24 @@ public class EnemyAi : MonoBehaviour
     public float damage = 20f; // Damage value that the enemy will deal to the player
 
     [SerializeField]
-    public float speed = 3f;
+    public float speed = 3f;// Speed at which the enemy moves towards the player
 
     [SerializeField]
-    public float detectionRange = 10f;
+    public float detectionRange = 10f;// Range within which the enemy will detect and move towards the player
 
     [SerializeField]
-    public float rotationSpeed = 200f;
+    public float rotationSpeed = 200f; // Speed at which the enemy rotates to face the player
 
     [SerializeField]
     public Transform point; // Reference to the blade (assumed to be at player's position)
 
     [SerializeField]
-    public float bladeRange = 3f;
+    public float bladeRange = 3f; // Range within which the enemy will stop moving towards the player to avoid the blade
 
     [SerializeField]
     private Rigidbody2D rb;
 
-    public float health = 50f;
+    public float health = 50f; // Health value for the enemy
 
 
 
@@ -100,7 +102,7 @@ public class EnemyAi : MonoBehaviour
     private void Die()
     {
         Debug.Log("Enemy has died.");
-        FindObjectOfType<ChoiceUi>().ShowChoicePanel();
+        FindObjectOfType<ChoiceUi>().ShowChoicePanel(playerScript);
         gameObject.SetActive(false);
     }
 

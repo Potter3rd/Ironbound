@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68861b157bcc59344a82e8acf224351f, type: 3}
   m_Name: Final
   m_EditorClassIdentifier: 
-  bladeName: 
+  bladeName: Final
   bladeSprite: {fileID: 21300000, guid: d19629f70ad56b449be287f926f2d89d, type: 3}
   damage: 50

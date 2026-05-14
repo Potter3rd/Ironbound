@@ -3,38 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+// This script manages the UI for offering the player a choice of blades, hilts, or guards.
 public class ChoiceUi : MonoBehaviour
 {
+    // UI Elements
     public GameObject choicePanel;
     public Button[] choiceButtons;
     public Image[] choiceImages;
     public TextMeshProUGUI[] choiceNames;
 
+    //Player elements
     public Player player;
     private BladeMANAGER bladeManager;
     private HiltManager hiltManager;
     private GuardManager guardManager;
 
+    // Data for offered items
     private int[] offerTypes = new int[3];
     private object[] offeredItems = new object[3];
 
     void Start()
     {
-        bladeManager = player.GetComponent<BladeMANAGER>();
-        hiltManager = player.GetComponent<HiltManager>();
-        guardManager = player.GetComponent<GuardManager>();
         choicePanel.SetActive(false);
     }
 
-    public void ShowChoicePanel()
+    public void ShowChoicePanel(Player player)
     {
-        Debug.Log("Blades in Manager");
-        foreach ( var b in bladeManager.blades)
-        {
-            Debug.Log(b.bladeName + "|" + b.GetInstanceID());
-        }
+        // Initialize player and managers
+        bladeManager = player.GetComponent<BladeMANAGER>();
+        hiltManager = player.GetComponent<HiltManager>();
+        guardManager = player.GetComponent<GuardManager>();
 
+        // Randomly select 3 unique types (0: Blade, 1: Hilt, 2: Guard)
         int[] types = { 0, 1, 2 };
         for (int i = types.Length - 1; i > 0; i--)
         {
@@ -44,6 +44,7 @@ public class ChoiceUi : MonoBehaviour
             types[j] = temp;
         }
 
+        // Offer the first 3 types from the shuffled array
         for (int i = 0; i < 3; i++)
         {
             offerTypes[i] = types[i];
@@ -70,15 +71,18 @@ public class ChoiceUi : MonoBehaviour
                 choiceNames[i].text = guard.guardName + "\nDefense: " + guard.defense;
             }
 
+            // Set up button listeners
             int index = i;
             choiceButtons[i].onClick.RemoveAllListeners();
             choiceButtons[i].onClick.AddListener(() => SelectItem(index));
         }
 
         choicePanel.SetActive(true);
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
     }
 
+  // is called when the player selects an item from the choice panel.
+  //it checks the type if item from the index which then uses the managers offered method wich updates the values needed and updates the sprite
     void SelectItem(int index)
     {
         Debug.Log("Selected Index: " + index);
