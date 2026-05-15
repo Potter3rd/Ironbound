@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
+//loads the main menu when the player dies and clicks the button on the death screen
 public class DeathButton : MonoBehaviour
 {
     public void OnClick()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 // This script manages the UI for offering the player a choice of blades, hilts, or guards.
 public class ChoiceUi : MonoBehaviour
 {

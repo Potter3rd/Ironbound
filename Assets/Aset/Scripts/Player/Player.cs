@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script manages the player's movement, health, and interactions with enemies. It also provides methods to get the player's damage and defense based on equipped items.
 public class Player : MonoBehaviour
 {
     //player variables
@@ -15,7 +16,7 @@ public class Player : MonoBehaviour
 
     public float health;
 
-
+    // Start is called before the first frame update so that it gets the ridgebody component ans sets the player's health to the health of the currently equipped hilt
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -73,8 +74,10 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    //returns the damage value of the currently equipped blade, or 0 if no blade is equipped
     public float getDamage()
     {
+        // Check if a blade is equipped and return its damage, otherwise return 0
         if (bladeManager.equipped != null)
         {
             return bladeManager.equipped.damage;
@@ -85,6 +88,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //returns the defense value of the currently equipped guard, or 0 if no guard is equipped
     public float getDefense()
     {
         if (guardManager.equipped != null)

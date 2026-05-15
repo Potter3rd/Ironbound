@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//code for the player to follow the player and stay within the bounds of the level
 public class CameraFCluade : MonoBehaviour
 {
     public Transform player;
