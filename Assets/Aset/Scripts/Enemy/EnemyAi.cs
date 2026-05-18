@@ -29,6 +29,8 @@ public class EnemyAi : MonoBehaviour
 
     public float health = 50f; // Health value for the enemy
 
+    public GameObject choicePanel; // Reference to the choice panel UI
+
 
 
     private void Start()

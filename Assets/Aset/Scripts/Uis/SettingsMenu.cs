@@ -4,6 +4,9 @@ using UnityEngine;
 public class SettingsMenu : MonoBehaviour
 {
     public GameObject settingsPanel;
+    public GameObject winUI;
+
+    public EnemyAi Boss;
 
     //watches if the user clicks escape and opens or closes the settings menu accordingly
     void Update()
@@ -15,6 +18,15 @@ public class SettingsMenu : MonoBehaviour
                 CloseSettings();
             else
                 OpenSettings();
+        }
+
+        //if the boss is dead open the winui screen
+        if(Boss != null && Boss.health <= 0)
+        {
+            if (winUI != null)
+            {
+                winUI .SetActive(true);
+            }
         }
     }
 
