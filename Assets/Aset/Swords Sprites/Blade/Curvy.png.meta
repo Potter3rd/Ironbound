@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7f82507feeeb2354691f7f5c44c019fd
+guid: 2db5c3569ce6241489ecd49c19630eab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3933303701241328114
-    second: Flat Hilt_0
+      213: 1591899461146832645
+    second: Curvy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -126,22 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flat Hilt_0
+      name: Curvy_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 12
-        width: 26
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8
+        y: 0
+        width: 17
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3498221, y: 0.0018485355}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f1f73270e6e59630800000000000000
-      internalID: 3933303701241328114
+      spriteID: 50feacb2020971610800000000000000
+      internalID: 1591899461146832645
       vertices: []
       indices: 
       edges: []
@@ -149,14 +149,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 70e01bda1a4812b488f0d8888aefc97d
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Curvy_0: 1591899461146832645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

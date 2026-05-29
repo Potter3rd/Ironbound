@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 47a0feae3fc19934594e5f9e3942c22c
+guid: 7f82507feeeb2354691f7f5c44c019fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7583737042175225931
-    second: double ended hilt_0
+      213: 3933303701241328114
+    second: Flat Hilt_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,22 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: double ended hilt_0
+      name: Flat Hilt_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 28
-        height: 32
-      alignment: 9
-      pivot: {x: 0.520015, y: 0.9962057}
+        x: 4
+        y: 12
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bf8c2b275721c690800000000000000
-      internalID: -7583737042175225931
+      spriteID: 2f1f73270e6e59630800000000000000
+      internalID: 3933303701241328114
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 191392dea00b8e24b945a7881cd8549f
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -157,7 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      double ended hilt_0: -7583737042175225931
+      Flat Hilt_0: 3933303701241328114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

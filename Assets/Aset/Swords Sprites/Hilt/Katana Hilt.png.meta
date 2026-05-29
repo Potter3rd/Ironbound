@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 47a0feae3fc19934594e5f9e3942c22c
+guid: 49bafc7dc9a740c44a30541c9b1223ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7583737042175225931
-    second: double ended hilt_0
+      213: -2067812654337896856
+    second: Katana Hilt_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,22 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: double ended hilt_0
+      name: Katana Hilt_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 11
         y: 0
-        width: 28
+        width: 10
         height: 32
       alignment: 9
-      pivot: {x: 0.520015, y: 0.9962057}
+      pivot: {x: 0.51245385, y: 0.9981515}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bf8c2b275721c690800000000000000
-      internalID: -7583737042175225931
+      spriteID: 86ec12cb857ad43e0800000000000000
+      internalID: -2067812654337896856
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 191392dea00b8e24b945a7881cd8549f
+    spriteID: a5e786382a62bf640b1c9a0fcc49406d
     internalID: 0
     vertices: []
     indices: 
@@ -157,7 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      double ended hilt_0: -7583737042175225931
+      Katana Hilt_0: -2067812654337896856
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
