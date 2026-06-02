@@ -1,12 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Manages the tutorial, allowing the player to close it by pressing the enter key on the numpad
+//Manages the tutorial ui screen, allowing the player to close it by pressing the backspace key
 public class TutorialScript : MonoBehaviour
 {
     public GameObject tutorial;
 
-    // Update is called once per frame
+    void Start()
+    {
+        //so it always pops up on start
+        tutorial.SetActive(true);
+    }
+
+    //if the player presses the backspace key, close the tutorial
+    //no params
+    //returns void
+    //no exceptions
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -18,6 +27,10 @@ public class TutorialScript : MonoBehaviour
         }
     }
 
+    //Helper to turn the tutorial off
+    //no params
+    //returns void
+    //no exceptions
     public void CloseTutorial()
     {
         tutorial.SetActive(false);

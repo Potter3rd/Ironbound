@@ -31,6 +31,9 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // Opens the settings menu and pauses the game
+    //no params
+    //returns void
+    //no exceptions
     public void OpenSettings()
     {
         settingsPanel.SetActive(true);
@@ -38,6 +41,9 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // Closes the settings menu and resumes the game
+    //no params
+    //returns void
+    //no exceptions
     public void CloseSettings()
     {
         settingsPanel.SetActive(false);
@@ -45,6 +51,9 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // Quits the game. If in the editor, it stops play mode. If in a build, it quits the application.
+    //no params
+    //returns void
+    //no exceptions
     public void QuitGame()
     {
         if (Application.isEditor)
