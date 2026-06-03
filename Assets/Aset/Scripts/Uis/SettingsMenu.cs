@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 // This script manages the settings menu, allowing the player to open and close it, as well as quit the game.
@@ -5,8 +6,13 @@ public class SettingsMenu : MonoBehaviour
 {
     public GameObject settingsPanel;
     public GameObject winUI;
+    public AudioSource NormalM;
+    public AudioSource PlayerM;
+
 
     public EnemyAi Boss;
+    public AudioSource BossM;
+    
 
     //watches if the user clicks escape and opens or closes the settings menu accordingly
     void Update()
@@ -25,7 +31,14 @@ public class SettingsMenu : MonoBehaviour
         {
             if (winUI != null)
             {
-                winUI .SetActive(true);
+                winUI.SetActive(true);
+                BossM.Stop();
+                NormalM.Stop();
+                if (!PlayerM.isPlaying)
+                {
+                    PlayerM.Play();
+                }
+                Debug.Log("playing player music");
             }
         }
     }
