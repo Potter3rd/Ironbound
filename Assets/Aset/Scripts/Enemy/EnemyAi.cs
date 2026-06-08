@@ -38,7 +38,7 @@ public class EnemyAi : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
     
-    //what methods get called in
+    //what methods get called in, I use fixed so that they all update at teh same time helps with lag
     private void FixedUpdate()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
@@ -100,7 +100,7 @@ public class EnemyAi : MonoBehaviour
 
     }
 
-    //if the enemy runs out of health, this function is called to handle the enemy's death
+    //if the enemy runs out of health it "dies" and opens the choice panel for the player to choose an item
     private void Die()
     {
         Debug.Log("Enemy has died.");
@@ -108,6 +108,7 @@ public class EnemyAi : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    //returns the current health of the enemy
     public float GetHealth()
     {
         return health;

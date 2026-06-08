@@ -6,11 +6,17 @@ public class SettingsMenu : MonoBehaviour
 {
     public GameObject settingsPanel;
     public GameObject winUI;
+
+    //Music that starts playing
     public AudioSource NormalM;
+
+    //the yippie music that plays when you win
     public AudioSource PlayerM;
 
 
     public EnemyAi Boss;
+
+    //the music that plays during the boss fight
     public AudioSource BossM;
     
 
@@ -44,9 +50,6 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // Opens the settings menu and pauses the game
-    //no params
-    //returns void
-    //no exceptions
     public void OpenSettings()
     {
         settingsPanel.SetActive(true);
@@ -54,19 +57,13 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // Closes the settings menu and resumes the game
-    //no params
-    //returns void
-    //no exceptions
     public void CloseSettings()
     {
         settingsPanel.SetActive(false);
         Time.timeScale = 1f;
     }
 
-    // Quits the game. If in the editor, it stops play mode. If in a build, it quits the application.
-    //no params
-    //returns void
-    //no exceptions
+    // Quits the game if in the editor it stops the mode you are in if in build it closes the application
     public void QuitGame()
     {
         if (Application.isEditor)

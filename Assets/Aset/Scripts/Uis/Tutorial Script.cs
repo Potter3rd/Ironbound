@@ -13,9 +13,6 @@ public class TutorialScript : MonoBehaviour
     }
 
     //if the player presses the backspace key, close the tutorial
-    //no params
-    //returns void
-    //no exceptions
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -28,9 +25,6 @@ public class TutorialScript : MonoBehaviour
     }
 
     //Helper to turn the tutorial off
-    //no params
-    //returns void
-    //no exceptions
     public void CloseTutorial()
     {
         tutorial.SetActive(false);

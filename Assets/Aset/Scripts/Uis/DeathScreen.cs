@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//when the player dies it ioens the death screen
+//when the player dies it opens the death screen
 public class DeathScreen : MonoBehaviour
 {
     public GameObject deathScreen;

@@ -5,20 +5,28 @@ using UnityEngine.SceneManagement;
 public class CameraFCluade : MonoBehaviour
 {
     public Transform player;
-    public PolygonCollider2D bounds;
-    public float followSpeed = 5f; // Adjust in Inspector for smoothness
 
+    //camera bounds in the map
+    public PolygonCollider2D bounds;
+
+    public float followSpeed = 5f;
+
+    //late update so that every other actions take prioty to the camera movement
     void LateUpdate()
     {
-        if (player == null || bounds == null) return;
+        //so there no errors thrown if the player or bounds are not set
+        if (player == null || bounds == null)
+        {
+            return;
+        }
 
-        // Follow the player
+        // positions of the player and camera, but the camera's
         Vector3 targetPos = new Vector3(player.position.x, player.position.y, transform.position.z);
 
-        // Smooth follow
+        //makes it so that the camera movement is smooth and not jittery
         Vector3 smoothed = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
 
-        // Clamp to bounds
+        //if the camera is outside the bounds, it will be moved back inside the bounds
         if (!bounds.OverlapPoint(smoothed))
         {
             Vector2 closest = bounds.ClosestPoint(smoothed);
@@ -26,10 +34,5 @@ public class CameraFCluade : MonoBehaviour
         }
 
         transform.position = smoothed;
-    }
-
-    public void openSettings()
-    {
-        SceneManager.LoadSceneAsync(2);
     }
 }

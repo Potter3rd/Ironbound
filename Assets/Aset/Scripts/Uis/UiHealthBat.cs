@@ -12,6 +12,7 @@ public class UiHealthBat : MonoBehaviour
     public float currenthealth;
 
     //sets the max health of the slider to the player's max health and sets the current health to the player's current max health
+    //param is an int of the players health
     private void SetMaxHealth(int health)
     {
         slider.maxValue = health;
@@ -19,6 +20,7 @@ public class UiHealthBat : MonoBehaviour
     }
 
     //sets the current health of the slider to the player's current health
+    //param is an int of the players health
     private void SetHealth(int health)
     {
         slider.value = health;

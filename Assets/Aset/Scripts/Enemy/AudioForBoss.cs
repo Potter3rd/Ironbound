@@ -17,8 +17,10 @@ public class AudioForBoss : MonoBehaviour
     //no exceptions
     private void Update()
     {
-        if(Vector3.Distance(transform.position, player.position) < range)
+        //if the distance between the boss and the player is less than the specified range it plays the music for the boss fight
+        if (Vector3.Distance(transform.position, player.position) < range)
         {
+            //if the audio source is not playing it plays the music for the boss fight and stops the normal music
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
@@ -27,6 +29,7 @@ public class AudioForBoss : MonoBehaviour
         }
         else
         {
+            //if the audio source is playing it stops the music for the boss fight and plays the normal music
             if (audioSource.isPlaying)
             {
                 audioSource.Stop();

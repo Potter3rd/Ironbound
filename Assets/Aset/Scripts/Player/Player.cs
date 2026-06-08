@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     }
 
     //Checks if the enemy touches the player and if it does, it takes damage
+    //params is a Collider2D representing the enemy that touched the player
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("EnemyB"))
@@ -50,6 +51,7 @@ public class Player : MonoBehaviour
     }
 
     //take damage function that reduces the player's health and checks for death
+    //params is a float representing the damage taken by the player
     public void TakeDamage(float damage)
     {
         float damageTaken = damage - getDefense();
@@ -65,7 +67,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    //if player runs out of health, this function is called to handle the player's death
+    //if player runs out of health it deletes the player and shows the player died in the console
     private void Die()
     {
         // Handle player death (e.g., play animation, disable controls, etc.)
@@ -75,6 +77,7 @@ public class Player : MonoBehaviour
     }
 
     //returns the damage value of the currently equipped blade, or 0 if no blade is equipped
+    //returns player's damage value
     public float getDamage()
     {
         // Check if a blade is equipped and return its damage, otherwise return 0
@@ -89,6 +92,7 @@ public class Player : MonoBehaviour
     }
 
     //returns the defense value of the currently equipped guard, or 0 if no guard is equipped
+    //returns player's defense value
     public float getDefense()
     {
         if (guardManager.equipped != null)
